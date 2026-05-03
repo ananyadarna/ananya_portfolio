@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     title: 'NEXUS',
     subtitle: 'AI-Powered Supply Chain Intelligence Platform',
-    image: 'public/project/nexus.png',
+    image: '/project/nexus.png',
     badge: 'featured',
     badgeText: 'Featured',
     description:
@@ -32,7 +32,7 @@ const projects = [
     id: 2,
     title: 'TrashMorph',
     subtitle: 'Smart Upcycling Web Application',
-    image: 'public/project/trashmorph.png',
+    image: '/project/trashmorph.png',
     badge: 'new',
     badgeText: 'Live',
     description:
@@ -54,7 +54,7 @@ const projects = [
     id: 3,
     title: 'Laundry App',
     subtitle: 'Order Management System',
-    image: 'public/project/laundry.png',
+    image: '/project/laundry.png',
     badge: 'stack',
     badgeText: 'Full Stack',
     description:
