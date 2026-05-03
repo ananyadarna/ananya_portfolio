@@ -30,7 +30,7 @@ export default function About() {
           <div className="about-image-wrap reveal" ref={imageRef}>
             <div className="about-glow" />
             <div className="about-image-frame">
-              <div className="about-image-inner"><img src="public\profile.jpeg" alt="Ananya Darna" style={{ 
+              <div className="about-image-inner"><img src="/profile.jpeg" alt="Ananya Darna" style={{ 
       width: '100%', 
       height: '100%', 
       objectFit: 'cover', 
