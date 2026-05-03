@@ -1,7 +1,10 @@
 # Ananya Darna — Developer Portfolio
 
-A premium, recruiter-focused developer portfolio built with **React + Vite** and pure CSS.  
-Zero UI libraries — every pixel is hand-crafted.
+A premium, recruiter-focused developer portfolio built with React + Vite and custom CSS for a fully handcrafted UI experience.
+
+🌐 **Live Demo:** [Visit Portfolio](https://ananya-portfolio-three-mu.vercel.app/)
+
+💼 Open to Software Developer, Frontend, and Full Stack Opportunities
 
 ---
 
@@ -22,13 +25,37 @@ Zero UI libraries — every pixel is hand-crafted.
 
 ---
 
+## 🎯 Purpose
+
+This portfolio was built to present my technical skills, projects, and experience in a visually strong and professional way for recruiters, hiring managers, and collaborators.
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Usage |
+|---|---|
+| React 18 | Component-based UI |
+| Vite | Fast development & build tool |
+| JavaScript | Core logic |
+| CSS3 | Styling, layout, animations |
+| Canvas API | Interactive particle effects |
+| Font Awesome | Icons |
+| Google Fonts | Syne, Inter, JetBrains Mono |
+
+---
+
 ## 🗂 Project Structure
 
 ```bash
 portfolio/
 ├── public/
 │   ├── ananya_resume.pdf
-│   └── profile.jpg
+│   ├── profile.jpg
+│   └── project/
+│       ├── nexus.png
+│       ├── trashmorph.png
+│       └── laundry.png
 ├── index.html                  ← Vite entry point
 ├── vite.config.js
 ├── package.json
@@ -68,7 +95,7 @@ portfolio/
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Run Locally
 
 ```bash
 # 1. Install dependencies
@@ -87,43 +114,25 @@ npm run preview
 
 ---
 
-## 🌐 Deploy
+## 🌐 Deployment
 
-### Vercel (recommended)
-```bash
-npm i -g vercel
-vercel
-```
+Hosted on **Vercel**  
 
 
-### Netlify
-```bash
-npm run build
-# Upload the /dist folder
-```
+---
+## 📄 Resume
 
-### GitHub Pages
-```bash
-npm run build
-# Deploy /dist contents to gh-pages branch
-```
+Included in repository: `public/ananya_resume.pdf`
 
 ---
 
+## 👩‍💻 Author
 
-## 🛠 Tech Stack
-
-| Tech | Role |
-|---|---|
-| React 18 | UI components & state |
-| Vite 5 | Dev server & bundler |
-| Pure CSS | Styling, animations, responsive |
-| Canvas API | Particle background |
-| IntersectionObserver | Scroll-reveal animations |
-| Google Fonts | Syne + Inter + JetBrains Mono |
+**Ananya Darna**  
+**GitHub:** [ananyadarna](https://github.com/ananyadarna)  
+Open to internships, frontend developer roles, and full stack opportunities.
 
 ---
-
 ## 📄 License
 
 MIT — Free to use and modify for personal portfolios.
