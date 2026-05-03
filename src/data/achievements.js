@@ -44,7 +44,7 @@ export const certifications = [
 
 export const githubStats = [
   { num: '4', label: 'Repositories'      },
-  { num: '38+',  label: 'Contributions' },
+  { num: '45+',  label: 'Contributions' },
   { num: '3+',   label: 'Projects Built'   },
   { num: '2026',  label: 'Growing Daily'  },
 ]
