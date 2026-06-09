@@ -1,9 +1,9 @@
 import React from 'react'
 import useReveal from '../hooks/useReveal'
+import useGithubStats from '../hooks/useGithubStats'
 import {
   achievements,
-  certifications,
-  githubStats
+  certifications
 } from '../data/achievements'
 import '../styles/Experience.css'
 
@@ -42,6 +42,7 @@ function AchievementCard({ item }) {
 export default function Experience() {
   const headerRef = useReveal()
   const gridRef = useReveal()
+  const liveStats = useGithubStats('ananyadarna') 
 
   return (
     <section id="experience">
@@ -91,20 +92,17 @@ export default function Experience() {
             </div>
 
             <div className="github-stats">
-              {githubStats.map(stat => (
-                <div
-                  className="gh-stat-card hoverable"
-                  key={stat.label}
-                >
-                  <div className="gh-stat-num">
-                    {stat.num}
+                {(liveStats ?? [
+                  {label: 'Open Source PRs', num: '…'},
+                  { label: 'Public Repos',  num: '…' },
+                  { label: 'PRs Merged',     num: '…' },
+                  { label: 'Contributions', num: '…' },
+                ]).map(stat => (
+                  <div className="gh-stat-card hoverable" key={stat.label}>
+                    <div className="gh-stat-num">{stat.num}</div>
+                    <div className="gh-stat-label">{stat.label}</div>
                   </div>
-
-                  <div className="gh-stat-label">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
 
             <div
