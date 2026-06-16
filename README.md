@@ -17,8 +17,10 @@ A recruiter-focused developer portfolio built with React, Vite, and custom CSS, 
 | 🖱️ Custom cursor | Glow dot + trailing ring |
 | 📊 Scroll progress bar | Top page reading indicator |
 | ⌨️ Typing animation | Dynamic hero section roles |
-| 🧠 Skill cards | Filterable skills with animated progress bars |
-| 💼 Project cards | Live demo + GitHub repository links |
+| 🧠 Skill cards | Filterable skills with animated progress bars (includes Tailwind, FastAPI, Docker, etc.) |
+| 💼 Project cards | Live demo + GitHub repository links (includes SmartQR Dine, Nexus, etc.) |
+| 🌐 Open Source section | Dedicated showcase of GSSoC'26 & NSoC'26 contributions with direct PR links |
+| 🎖️ Credentials showcase | Restructured Achievements & Certifications section with visual GSSoC and NSoC badges |
 | 📬 Contact form | Controlled React form with success state |
 | 📱 Fully responsive | Optimized for mobile, tablet, desktop |
 | 🚀 Deploy-ready | Vercel / Netlify / GitHub Pages |
@@ -27,7 +29,7 @@ A recruiter-focused developer portfolio built with React, Vite, and custom CSS, 
 
 ## 🎯 Purpose
 
-This portfolio was built to present my technical skills, projects, and experience in a visually strong and professional way for recruiters, hiring managers, and collaborators.
+This portfolio was built to present my technical skills, open-source contributions, projects, and credentials in a visually strong and professional way for recruiters, hiring managers, and collaborators.
 
 ---
 
@@ -37,11 +39,12 @@ This portfolio was built to present my technical skills, projects, and experienc
 |---|---|
 | React 18 | Component-based UI |
 | Vite | Fast development & build tool |
-| JavaScript | Core logic |
-| CSS3 | Styling, layout, animations |
-| Canvas API | Interactive particle effects |
-| Font Awesome | Icons |
-| Google Fonts | Syne, Inter, JetBrains Mono |
+| JavaScript / Python / Java | Programming Languages |
+| Node.js / Express.js / FastAPI | Backend APIs & Frameworks |
+| MongoDB / MySQL / Firebase / Redis | Database systems |
+| Socket.io / WebSockets | Real-time features |
+| CSS3 / Tailwind CSS | Responsive styling |
+| Docker | Containerization |
 
 ---
 
@@ -52,7 +55,12 @@ portfolio/
 ├── public/
 │   ├── ananya_resume.pdf
 │   ├── profile.jpg
-│   └── project/
+│   ├── badges/                 ← GSSoC & NSoC badges
+│   │   ├── gssoc_rising_star.png
+│   │   ├── gssoc_contributor.png
+│   │   └── nsoc_tech_contributor.png
+│   └── project/                ← Project preview mockups
+│       ├── smartqr.png
 │       ├── nexus.png
 │       ├── trashmorph.png
 │       └── laundry.png
@@ -69,7 +77,8 @@ portfolio/
     │   ├── About.jsx
     │   ├── Skills.jsx
     │   ├── Projects.jsx
-    │   ├── Experience.jsx
+    │   ├── OpenSource.jsx      ← Open source contributions component
+    │   ├── Experience.jsx      ← Achievements & Certifications component
     │   ├── Contact.jsx
     │   └── Footer.jsx
     ├── hooks/
@@ -80,7 +89,8 @@ portfolio/
     ├── data/
     │   ├── skills.js
     │   ├── projects.js
-    │   └── achievements.js
+    │   ├── opensource.js       ← Open source contributions data
+    │   └── achievements.js     ← Achievements & badges data
     └── styles/
         ├── global.css
         ├── Navbar.css
@@ -88,7 +98,8 @@ portfolio/
         ├── About.css
         ├── Skills.css
         ├── Projects.css
-        ├── Experience.css
+        ├── OpenSource.css      ← Open source styles
+        ├── Experience.css      ← Achievements styles
         ├── Contact.css
         └── Footer.css
 ```
@@ -130,7 +141,8 @@ Included in repository: `public/ananya_resume.pdf`
 
 **Ananya Darna**  
 **GitHub:** [ananyadarna](https://github.com/ananyadarna)  
-Open to internships, frontend developer roles, and full stack opportunities.
+**LinkedIn:** [ananyadarna](https://linkedin.com/in/ananyadarna)  
+Open to software developer internships, full stack, and frontend roles.
 
 ---
 ## 📄 License
