@@ -1,11 +1,40 @@
 const projects = [
   {
     id: 1,
+    title: 'SmartQR Dine',
+    subtitle: 'Multi-Tenant Restaurant SaaS Platform',
+    image: '/project/smartqr.png',
+    badge: 'featured',
+    badgeText: 'Featured',
+    description:
+      'A multi-tenant restaurant SaaS platform featuring dynamic QR code ordering, real-time kitchen Kanban terminals, menu builder customization, and interactive business analytics.',
+    problem:
+      'Inefficient order handling, manual errors, and high operational friction in restaurants.',
+    features: [
+      'Built multi-tenant setup with restaurant website builder & themes',
+      'Implemented real-time kitchen Kanban dashboard with Socket.io',
+      'Created dynamic QR code menu constructor & print-ready generator',
+      'Integrated interactive weekly sales analytics with glassmorphic tooltips',
+    ],
+    stack: [
+      'Next.js',
+      'Tailwind CSS',
+      'Node.js',
+      'Express',
+      'Socket.io',
+      'MongoDB',
+    ],
+    demoUrl: 'https://smartqr-dine.vercel.app',
+    githubUrl: 'https://github.com/ananyadarna/smartqr-dine',
+  },
+
+  {
+    id: 2,
     title: 'NEXUS',
     subtitle: 'AI-Powered Supply Chain Intelligence Platform',
     image: '/project/nexus.png',
-    badge: 'featured',
-    badgeText: 'Featured',
+    badge: 'new',
+    badgeText: 'Live',
     description:
       'Real-time logistics platform built to improve shipment visibility, disruption response, and supply chain coordination. Contributed backend systems, APIs, and live data workflows as part of a team project.',
     problem:
@@ -29,7 +58,7 @@ const projects = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: 'TrashMorph',
     subtitle: 'Smart Upcycling Web Application',
     image: '/project/trashmorph.png',
@@ -51,7 +80,7 @@ const projects = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: 'Laundry App',
     subtitle: 'Order Management System',
     image: '/project/laundry.png',
