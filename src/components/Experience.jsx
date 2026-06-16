@@ -1,9 +1,9 @@
 import React from 'react'
 import useReveal from '../hooks/useReveal'
-import useGithubStats from '../hooks/useGithubStats'
 import {
   achievements,
-  certifications
+  certifications,
+  badges
 } from '../data/achievements'
 import '../styles/Experience.css'
 
@@ -39,13 +39,30 @@ function AchievementCard({ item }) {
   )
 }
 
+function BadgeCard({ item }) {
+  return (
+    <div className="badge-card hoverable">
+      <div className="badge-img-wrap">
+        <img src={item.image} alt={`${item.title} ${item.subtitle}`} className="badge-img" />
+      </div>
+      <div className="badge-details">
+        <div className="badge-org">{item.org}</div>
+        <div className="badge-title-row">
+          <span className="badge-title">{item.title}</span>
+          <span className="badge-sub">{item.subtitle}</span>
+        </div>
+        <p className="badge-desc">{item.desc}</p>
+      </div>
+    </div>
+  )
+}
+
 export default function Experience() {
   const headerRef = useReveal()
   const gridRef = useReveal()
-  const liveStats = useGithubStats('ananyadarna') 
 
   return (
-    <section id="experience">
+    <section id="achievements">
       <div className="grid-bg" />
       <div
         className="glow-orb orb2"
@@ -54,16 +71,22 @@ export default function Experience() {
 
       <div className="experience-inner">
         <div className="reveal" ref={headerRef}>
-          <div className="section-tag">Journey</div>
+          <div className="section-tag">Credentials</div>
 
           <h2 className="section-title">
-            Experience & <span>Achievements</span>
+            Achievements & <span>Certifications</span>
           </h2>
 
           <p className="section-desc">
-            Milestones that shaped my skills and
-            perspective as a developer.
+            Official badges, certifications, and project milestones highlighting technical credentials and open-source contributions.
           </p>
+        </div>
+
+        {/* Visual Badges Showcase */}
+        <div className="badges-showcase reveal" ref={useReveal()}>
+          {badges.map(item => (
+            <BadgeCard key={item.id} item={item} />
+          ))}
         </div>
 
         <div className="experience-grid reveal" ref={gridRef}>
@@ -71,7 +94,7 @@ export default function Experience() {
           <div>
             <div className="exp-col-title">
               <i className="fa-solid fa-trophy"></i>{' '}
-              Achievements
+              Key Milestones
             </div>
 
             <div className="achievement-list">
@@ -87,28 +110,6 @@ export default function Experience() {
           {/* Right Column */}
           <div>
             <div className="exp-col-title">
-              <i className="fa-solid fa-chart-line"></i>{' '}
-              GitHub Activity
-            </div>
-
-            <div className="github-stats">
-                {(liveStats ?? [
-                  {label: 'Open Source PRs', num: '…'},
-                  { label: 'Public Repos',  num: '…' },
-                  { label: 'PRs Merged',     num: '…' },
-                  { label: 'Contributions', num: '…' },
-                ]).map(stat => (
-                  <div className="gh-stat-card hoverable" key={stat.label}>
-                    <div className="gh-stat-num">{stat.num}</div>
-                    <div className="gh-stat-label">{stat.label}</div>
-                  </div>
-                ))}
-            </div>
-
-            <div
-              className="exp-col-title"
-              style={{ marginTop: '2rem' }}
-            >
               <i className="fa-solid fa-certificate"></i>{' '}
               Certifications
             </div>

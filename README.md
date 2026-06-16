@@ -1,6 +1,6 @@
 # Ananya Darna — Developer Portfolio
 
-A premium, recruiter-focused developer portfolio built with React + Vite and custom CSS for a fully handcrafted UI experience.
+A recruiter-focused developer portfolio built with React, Vite, and custom CSS, featuring interactive animations, responsive design, and a fully handcrafted user experience.
 
 🌐 **Live Demo:** [Visit Portfolio](https://ananya-portfolio-three-mu.vercel.app/)
 

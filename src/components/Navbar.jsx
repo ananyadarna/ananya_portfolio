@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import '../styles/Navbar.css'
 
-const links = ['About', 'Skills', 'Projects', 'Experience', 'Contact']
+const links = ['About', 'Skills', 'Projects', 'Open Source', 'Achievements', 'Contact']
 
 export default function Navbar({ dark, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const scrollTo = (id) => {
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })
+    const targetId = id.toLowerCase().replace(/\s+/g, '')
+    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' })
     setMenuOpen(false)
   }
 
@@ -16,7 +17,7 @@ export default function Navbar({ dark, toggleTheme }) {
       {/* Mobile overlay menu */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         {links.map(l => (
-          <a key={l} href={`#${l.toLowerCase()}`} onClick={() => scrollTo(l)}>
+          <a key={l} href={`#${l.toLowerCase().replace(/\s+/g, '')}`} onClick={() => scrollTo(l)}>
             {l}
           </a>
         ))}
@@ -28,7 +29,7 @@ export default function Navbar({ dark, toggleTheme }) {
         <ul className="nav-links">
           {links.map(l => (
             <li key={l}>
-              <a href={`#${l.toLowerCase()}`}>{l}</a>
+              <a href={`#${l.toLowerCase().replace(/\s+/g, '')}`}>{l}</a>
             </li>
           ))}
         </ul>

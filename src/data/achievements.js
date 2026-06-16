@@ -42,9 +42,29 @@ export const certifications = [
   }
 ]
 
-export const githubStats = [
-  { num: '4', label: 'Repositories'      },
-  { num: '45+',  label: 'Contributions' },
-  { num: '3+',   label: 'Projects Built'   },
-  { num: '2026',  label: 'Growing Daily'  },
+export const badges = [
+  {
+    id: 1,
+    title: 'GSSoC 2026',
+    subtitle: 'Rising Star',
+    image: '/badges/gssoc_rising_star.png',
+    org: 'GirlScript Summer of Code',
+    desc: 'Recognized as a Rising Star for exceptional open-source contributions across multiple codebases.'
+  },
+  {
+    id: 2,
+    title: 'GSSoC 2026',
+    subtitle: 'Contributor',
+    image: '/badges/gssoc_contributor.png',
+    org: 'GirlScript Summer of Code',
+    desc: 'Successfully merged pull requests, contributing to active open-source repositories.'
+  },
+  {
+    id: 3,
+    title: 'NSoC 2026',
+    subtitle: 'Tech Contributor',
+    image: '/badges/nsoc_tech_contributor.png',
+    org: 'NeoSF Summer of Code',
+    desc: 'Awarded for technical contributions, codebase hygiene, and clean implementations.'
+  }
 ]
