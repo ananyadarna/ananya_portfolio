@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import useReveal from '../hooks/useReveal'
 import { globalStats, contributions } from '../data/opensource'
 import '../styles/OpenSource.css'
@@ -62,7 +62,9 @@ function ContributionCard({ item }) {
 }
 
 export default function OpenSource() {
+  const [modalOpen, setModalOpen] = useState(false)
   const headerRef = useReveal()
+  const bannerRef = useReveal()
   const gridRef = useReveal()
 
   return (
@@ -90,12 +92,61 @@ export default function OpenSource() {
           </div>
         </div>
 
+        {/* Featured Honor Banner */}
+        <div className="reveal" ref={bannerRef} style={{ marginBottom: '2.5rem' }}>
+          <div className="featured-honor-banner hoverable">
+            <div className="honor-content">
+              <div className="honor-badge">
+                <i className="fa-solid fa-trophy" /> NSoC '26 Honor
+              </div>
+              <h3 className="honor-title">Secured Global Rank 51 in Nexus Spring of Code</h3>
+              <p className="honor-desc">
+                Recognized for outstanding contributions, dedication, and technical excellence among thousands of developers globally.
+              </p>
+            </div>
+            <div className="honor-actions">
+              <button 
+                className="btn-primary hoverable" 
+                onClick={() => setModalOpen(true)}
+              >
+                <i className="fa-solid fa-image" /> View Certificate
+              </button>
+              <a 
+                href="https://drive.google.com/file/d/10EHceeFo84DB-IfdTSdXZ-9daMrLC1vL/view?usp=drive_link" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-secondary hoverable"
+              >
+                <i className="fa-solid fa-arrow-up-right-from-square" /> Verify Link
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div className="os-grid reveal" ref={gridRef}>
           {contributions.map(item => (
             <ContributionCard key={item.id} item={item} />
           ))}
         </div>
       </div>
+
+      {/* Certificate Lightbox Modal */}
+      {modalOpen && (
+        <div className="certificate-modal" onClick={() => setModalOpen(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close hoverable" onClick={() => setModalOpen(false)}>
+              <i className="fa-solid fa-xmark" />
+            </button>
+            <div className="modal-img-wrap">
+              <img 
+                src="/certificates/nsoc_2026_certificate.png" 
+                alt="NSoC 2026 Certificate - Rank 51" 
+                className="modal-img" 
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

@@ -1,26 +1,33 @@
 export const achievements = [
   {
     id: 1,
+    faIcon: 'fa-solid fa-medal',
+    title: 'NSoC 2026 - Global Rank 51',
+    sub: 'Secured 51st Rank globally in NeoSF Spring of Code 2026 for outstanding open-source contributions and development performance.',
+    badge: 'Rank 51',
+    link: 'https://drive.google.com/file/d/10EHceeFo84DB-IfdTSdXZ-9daMrLC1vL/view?usp=drive_link'
+  },
+  {
+    id: 2,
     faIcon: 'fa-solid fa-lightbulb',
     title: 'Google Solution Challenge 2026',
     sub: 'Building Nexus with team for real-world problem solving.',
     badge: 'Ongoing',
   },
   {
-    id: 2,
+    id: 3,
     faIcon: 'fa-brands fa-github',
     title: 'Hushh Open Source Hiring Challenge 2026',
     sub: 'Solved challenge tasks and submitted 2 pull requests while working with real-world codebase workflows.',
     badge: 'Contributor',
   },
   {
-    id: 3,
+    id: 4,
     faIcon: 'fa-solid fa-brain',
     title: 'National AI/ML Hackathon',
     sub: 'Participated in Round 1 Presentation Submission, organized by IIT Hyderabad via Unstop.',
     badge: 'Participant',
   }
-  
 ]
 
 export const certifications = [

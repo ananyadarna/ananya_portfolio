@@ -288,3 +288,183 @@
     align-self: flex-start;
   }
 }
+
+/* Featured Honor Banner */
+.featured-honor-banner {
+  background: linear-gradient(135deg, var(--card), var(--card2));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--tr);
+}
+
+.featured-honor-banner::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; width: 6px; height: 100%;
+  background: linear-gradient(to bottom, var(--violet), var(--cyan));
+  opacity: 0.8;
+}
+
+.featured-honor-banner:hover {
+  transform: translateY(-2px);
+  border-color: var(--border2);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
+}
+
+.honor-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.honor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgba(167, 139, 250, 0.12);
+  color: var(--violet);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  width: fit-content;
+}
+
+.honor-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.honor-desc {
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.honor-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Lightbox Modal */
+.certificate-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 11, 20, 0.85);
+  backdrop-filter: blur(14px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.modal-close {
+  position: absolute;
+  top: -1.25rem;
+  right: -1.25rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--card2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: none;
+  z-index: 10001;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: all var(--tr);
+}
+
+.modal-close:hover {
+  transform: rotate(90deg) scale(1.1);
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.modal-img-wrap {
+  width: 100%;
+  border-radius: var(--radius2);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Animations */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive updates for banner */
+@media (max-width: 900px) {
+  .featured-honor-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .honor-actions {
+    width: 100%;
+  }
+
+  .honor-actions .btn-primary,
+  .honor-actions .btn-secondary {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .modal-close {
+    top: 1rem;
+    right: 1rem;
+  }
+}
